@@ -14,21 +14,13 @@ n = size(X, 2);
 % You need to return the following variables correctly 
 all_theta = zeros(num_labels, n + 1);
 initial_theta=zeros(n+1,1);
-%initial_theta=zeros(n+1,10);
-%%%all_theta = zeros(3, 1);
-% Add ones to the X data matrix
+
 X = [ones(m, 1) X];
 
 for c=1:num_labels 
-   % = (y==c);
-  all_theta(c,:)= fmincg (@(t)(lrCostFunction(t, X, (y == c), lambda)), initial_theta);
-    %all_theta(c)=fmincg (@(t)(lrCostFunction(t, X, (y == c), lambda)), all_theta);
-   %all_theta(c)=fminunc(@(t)(lrCostFunction(t, X,y1,lambda)), all_theta);
-%%%%%%%%all_theta(c,:) = fmincg (@(t)(lrCostFunction(all_theta, X, (y==c), lambda)));
   
-%     if p >= 0.5
-%         y=i;
-%     end
+  all_theta(c,:)= fmincg (@(t)(lrCostFunction(t, X, (y == c), lambda)), initial_theta);
+  
     
 end
 
