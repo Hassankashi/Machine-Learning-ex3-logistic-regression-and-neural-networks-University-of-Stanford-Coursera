@@ -21,24 +21,10 @@ X = [ones(m, 1) X];
 %all_theta=all_theta(1,:);
 
 mahsa=sigmoid(X*all_theta');
-%p=mahsa;
-%%%%%%%%mx is indicated to max value and idx is indicated to index of max
-%%%%%%%%value
+
 [mx idx]=max(mahsa, [], 2);
 p=idx;
 
-%p=max(p, [], 2);
-
-%[y,I]= max(mahsa, [], 2);
-
-%p=[y,I];
-%%p=mahsa';
-%p=sigmoid(X * all_theta');
-
-%%p = max(p, [], 2);
-
-% for i=1:num_labels
-% end
 
 
 %
