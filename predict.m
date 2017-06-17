@@ -6,21 +6,16 @@ function p = predict(Theta1, Theta2, X)
 % Useful values
 m = size(X, 1);
 num_labels = size(Theta2, 1);
-%X = [ones(m, 1) X];
+
 % You need to return the following variables correctly 
 p = zeros(size(X, 1), 1);
 X = [ones(m, 1) X];
-%mana = [ones(m, 1) X];
-%all_theta=all_theta(1,:);
-
-%mahsa=sigmoid(X*Theta1');
 
 mana=sigmoid(X*Theta1');
 
 mina=[ones(m, 1) mana];
 mahsa=sigmoid(mina*Theta2');
-%%%%%%%%mx is indicated to max value and idx is indicated to index of max
-%%%%%%%%value
+
 [mx idx]=max(mahsa, [], 2);
 p=idx;
 
