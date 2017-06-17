@@ -23,16 +23,7 @@ function [J, grad] = lrCostFunction(theta, X, y, lambda)
 
 % You need to return the following variables correctly 
 
-% z=transpose(theta)*transpose(X);
-% 
-% hX=sigmoid(z);
-% 
-% J = ((-1/m)*(log(hX))*(y) + (log (1 - hX))*(1 - y))  + ( (lambda/2*m) * ((theta.^2)) );
-% 
 m = length(y); % number of training examples
-%b=transpose(theta);
-%theta = zeros(1,401);
-%mytheta=zeros(1,3);
 mahsa=sigmoid(X*theta);
 costSum =sum( (y'*log(mahsa)) + (1 - y')*log (1 - mahsa));
 theta(1)=0;
@@ -50,18 +41,6 @@ else
    grad=grad';
 end
 
-% if J==0
-%     grad = ((((1/m) .* (sum ((mahsa-transpose(y))*X)))));
-% else 
-% %     y=[y,[0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0 ]];
-% %     y=[y,[0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0 ]];
-% %     y=[y,[0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0; 0 ]];
-%    grad = ((((1/m) .* (sum ((mahsa-(y)')'*X))) )+ ((lambda/m).* theta)') ; 
-% end
-
-% grad = zeros(size(theta));
-% 
-% grad = ((1/m) * ((hX - transpose(y))*X)) + ((lambda/m) .* theta) ; 
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta.
