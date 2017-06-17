@@ -1,0 +1,33 @@
+Programming Exercise 3:
+Multi-class Classication and Neural Networks
+Machine Learning
+Introduction
+In this exercise, you will implement one-vs-all logistic regression and neural
+networks to recognize hand-written digits. Before starting the programming
+exercise, we strongly recommend watching the video lectures and completing
+the review questions for the associated topics.
+To get started with the exercise, download the starter code and unzip its
+contents to the directory where you wish to complete the exercise. If needed,
+use the cd command in Octave to change to this directory before starting
+this exercise.
+Files included in this exercise
+ex3.m - Octave script that will help step you through part 1
+ex3 nn.m - Octave script that will help step you through part 2
+ex3data1.mat - Training set of hand-written digits
+ex3weights.mat - Initial weights for the neural network exercise
+submitWeb.m - Alternative submission script
+submit.m - Submission script that sends your solutions to our servers
+displayData.m - Function to help visualize the dataset
+fmincg.m - Function minimization routine (similar to fminunc)
+sigmoid.m - Sigmoid function
+[?] lrCostFunction.m - Logistic regression cost function
+[?] oneVsAll.m - Train a one-vs-all multi-class classier
+[?] predictOneVsAll.m - Predict using a one-vs-all multi-class classier
+[?] predict.m - Neural network prediction function
+? indicates les you will need to complete
+
+Throughout the exercise, you will be using the scripts ex3.m and ex3 nn.m.
+These scripts set up the dataset for the problems and make calls to functions
+that you will write. You do not need to modify these scripts. You are only
+required to modify functions in other les, by following the instructions in
+this assignment.
